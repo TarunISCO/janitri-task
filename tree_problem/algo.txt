@@ -1,0 +1,50 @@
+def printBoundries(rootnode){
+	print(rootNode)
+
+	if(rootnode.left != null)
+		leftBoundries(rootnode.left)
+		printLeaves(rootnode.left)
+
+	if(rootnode.right != null)
+		printLeaves(rootnode.right)
+		rightBoundries(rootnode.right)
+}
+
+
+// To print left boundary
+def leftBoundries(rootnode){
+	print(rootnode)
+
+	if(rootnode.left != null)
+		leftboundaries(rootnode.left)
+
+	else if(rootnode.righty != null)
+		leftboundaries(rootchild.right)
+}
+
+
+// to print right boundary
+def rightBoundries(rootnode){
+
+	if(rootnode.right != null)
+		rightBoundries(rootnode.right)
+
+	else if(rootnode.left != null)
+		rightBoundries(rootchild.left)
+
+	print(rootnode)
+}
+
+
+// to print intermediate leaves
+def printLeaves(rootnode){
+	
+	if(rootnode.left != null)
+		printLeaves(rootnode.left)
+
+	if(rootnode.left == null and rootnode.right == null)
+		print(rootnode)
+
+	if(root.right != null)
+		printLeaves(rootnode.right)
+}
